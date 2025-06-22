@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content-="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Hanif Waidz - Portfolio</title>
+</head>
+<body>
+     <header class="header">
+        <a href="#home" class="logo">HANIF WAIDZ</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+  <nav class="navbar">
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\index.html">Home page</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\biodata.html">Biodata</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\experience.html">Experiece</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\education.html">Education</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\family.html">Family</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <section class="experience-slider">
+  <h2 style="margin-top: 40px;">🏐 Volleyball Coach</h2>
+
+  <div class="experience-content">
+    <div class="slider-box">
+      <img id="slide" src="image/coach vb1.jpg" alt="Volleyball Coach">
+      <button onclick="prevSlide()" class="btn-slide left">&#10094;</button>
+      <button onclick="nextSlide()" class="btn-slide right">&#10095;</button>
+    </div>
+
+    <div class="description">
+      <p><strong>Sekolah Menengah Kebangsaan Renek</strong> (2022)</p>
+      <p>I coach the school volleyball team in weekly training sessions and inter-school competitions. Responsibilities include planning strategies, motivating players, and managing matches.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+    const images = [
+      "image/coach vb1.jpg",
+      "image/coach vb2.jpg",
+      "image/coach vb3.jpg"
+    ];
+
+    let current = 0;
+
+    function showSlide(index) {
+      document.getElementById("slide").src = images[index];
+    }
+
+    function nextSlide() {
+      current = (current + 1) % images.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + images.length) % images.length;
+      showSlide(current);
+    }
+
+    // Mula-mula paparkan gambar pertama
+    showSlide(current);
+  </script>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Hanif Waidz. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

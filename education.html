@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content-="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Hanif Waidz - Portfolio</title>
+</head>
+<body>
+     <header class="header">
+        <a href="#home" class="logo">HANIF WAIDZ</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+  <nav class="navbar">
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\index.html">Home page</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\biodata.html">Biodata</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\experience.html">Experiece</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\education.html">Education</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\family.html">Family</a>
+            <a href="C:\Users\W11\OneDrive\Documents\assignment 2\gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <section class="Education" id="education">
+        <div class="slider">
+            <div class="slides" id="slideimage">
+                <img src="image/Logo Sekolah.jpg" alt="gambar 1">
+                <img src="image/form6.jpg" alt="gambar 2">
+                <img src="image/form6(1).jpg" alt="gambar 3">
+            </div>
+
+            <h2>Sekolah Menengah Kebangsaan Renek</h2>
+            <p>This is a secondary school that I attended from Form 1 to Form 6. This school has given me many sweet and bitter memories that I have experienced while I was here. While at this school, I have entered many sports competitions a while ago.</p>
+            
+            <button class="nav-button prev" onclick="prevSlide()">&#10094; Prev</button>
+            <button class="nav-button next" onclick="nextSlide()">Next &#10095;</button>
+        </div> 
+    </section>
+
+      <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slideimage").children;
+
+    function showSlide(index) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = i === index ? "block" : "none";
+      }
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    // Tunjuk slide pertama masa mula
+    window.onload = () => showSlide(currentIndex);
+  </script>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Hanif Waidz. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
